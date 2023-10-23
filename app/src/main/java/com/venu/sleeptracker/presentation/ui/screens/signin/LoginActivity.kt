@@ -38,6 +38,7 @@ import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -262,17 +263,21 @@ fun Login(
                             Text(
                                 text = stringResource(R.string.createAccount),
                                 color = Color.Gray,
-                                style = MaterialTheme.typography.bodyMedium,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 16.sp,
                                 modifier = Modifier.padding(5.dp)
                             )
 
                             Text(
                                 text = stringResource(R.string.signup),
                                 color = Color.Black,
-                                style = MaterialTheme.typography.labelLarge,
+
                                 modifier = Modifier
                                     .padding(5.dp)
-                                    .clickable { navController.navigate(Screen.Register.route)}, textAlign = TextAlign.Center
+                                    .clickable { navController.navigate(Screen.Register.route) },
+                                textAlign = TextAlign.Center,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 16.sp
                             )
 
                         }

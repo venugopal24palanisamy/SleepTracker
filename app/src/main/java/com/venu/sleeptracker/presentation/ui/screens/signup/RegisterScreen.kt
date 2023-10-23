@@ -57,7 +57,7 @@ fun RegisterScreen(navController: NavHostController) {
     val viewModel: RegisterViewModel = hiltViewModel()
 
     val context = LocalContext.current
-    Surface {
+    Surface(color = Color.White) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -239,12 +239,11 @@ fun RegisterScreen(navController: NavHostController) {
                         Button(
                             onClick = {
                                 if (viewModel.validate(context)) {
-                                 viewModel.registerUser {
-
-                                     if (it){
-                                         navController.navigate(Screen.Dashboard.route)
-                                     }
-                                 }
+                                    viewModel.registerUser {
+                                        if (it) {
+                                            navController.navigate(Screen.Dashboard.route)
+                                        }
+                                    }
                                 }
                             },
                             shape = RoundedCornerShape(35),
@@ -275,17 +274,20 @@ fun RegisterScreen(navController: NavHostController) {
                         Text(
                             text = stringResource(R.string.oldAccount),
                             color = Color.Gray,
-                            style = MaterialTheme.typography.bodyMedium,
-                            modifier = Modifier.padding(5.dp)
+                            modifier = Modifier.padding(5.dp),
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Medium
                         )
                         Text(
                             text = stringResource(R.string.login),
                             color = Color.Black,
-                            style = MaterialTheme.typography.labelLarge,
+
                             modifier = Modifier
                                 .padding(5.dp)
                                 .clickable { navController.popBackStack() },
-                            textAlign = TextAlign.Center
+                            textAlign = TextAlign.Center,
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Bold
                         )
                     }
                     Spacer(modifier = Modifier.padding(20.dp))
