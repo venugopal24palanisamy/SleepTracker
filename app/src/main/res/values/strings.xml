@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">SleepTracker</string>
+    <string name="app_name">Sleep Tracker</string>
+    <string name="login">Login</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_valid_email">Enter Valid Email</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_password">Enter Password\n</string>
+    <string name="password">Password</string>
+    <string name="createAccount">Create a new Account ?</string>
+    <string name="oldAccount">Already have an Account ?</string>
+    <string name="signup">Register</string>
+    <string name="enter_phone">Enter Phone</string>
+    <string name="enter_valid_phone">Enter Valid Phone</string>
+    <string name="enter_confirm_password">Enter Confirm Password</string>
+    <string name="password_not_matching">Confirm Password not matching Password</string>
 </resources>

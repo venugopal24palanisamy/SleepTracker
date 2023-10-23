@@ -1,4 +1,4 @@
-import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+
 
 plugins {
     id("com.android.application")
@@ -63,6 +63,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+    implementation("com.google.firebase:firebase-inappmessaging-ktx:20.4.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -70,6 +71,7 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+    implementation ("androidx.navigation:navigation-compose:2.4.0")
 
 
     //Room
@@ -84,8 +86,15 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
     implementation("androidx.hilt:hilt-work:1.0.0")
-    kapt("androidx.hilt:hilt-compiler:1.0.0")
-    implementation("androidx.work:work-runtime-ktx:2.8.0")
-    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
+    implementation("androidx.work:work-runtime-ktx:2.8.0")
+
+    kapt("androidx.hilt:hilt-compiler:1.1.0-alpha01")
+    implementation ("androidx.hilt:hilt-navigation-compose:1.1.0-alpha01")
+    implementation ("androidx.hilt:hilt-navigation-fragment:1.0.0")
+
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+    implementation ("androidx.constraintlayout:constraintlayout-compose:1.1.0-alpha03")
+    implementation ("io.coil-kt:coil-compose:1.4.0")
 }
